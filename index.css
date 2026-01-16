@@ -1,182 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 
+/* --- 1. Global Reset --- */
 body {
     margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
     background-color: #1a1a1a;
-    perspective: 1000px;
-    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
+/* Fixes the blue underlines and small text */
+a {
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 22px; 
+}
+
+/* --- 2. The Image (Floating) --- */
 #tilting-png {
-    width: 650px;
+    position: fixed; /* Keep it on the right side */
+    top: 50px;
+    right: 50px;
+    width: 35vw; 
+    max-width: 550px;
     height: auto;
-
-    position: absolute;
-    top: 95px;
-    right: 95px;
-            
-
-    transition: transform 0.15s ease-out; 
-            
-
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    image-rendering: -webkit-optimize-contrast; /* Keeps it crisp */
-    will-change: transform;
-            
-
-    transform: translateZ(0);
+    transition: transform 0.2s ease;
 }
 
-.introduction {
+#tilting-png:hover{
+    transform: scale(1.05);
+}
+
+/* --- 3. Content Sections (No more Absolute Position) --- */
+.introductions, .infos, .downloads {
+    position: relative;
+    z-index: 2;
+    max-width: 55%; /* Keeps text from hitting the image */
+    margin-bottom: 60px;
+}
+
+/* The Gradient Title Boxes */
+.introduction, .info, .download {
     border: 2px solid #333; 
-    position: absolute;
-    top: 35px;
-    left: 35px;
-    padding: 0px;            
-    width: 300px;              
-    border-radius: 8px;        
-    background-image: linear-gradient(
-    45deg,
-    hsl(0deg 0% 0%) 0%,
-    hsl(344deg 0% 19%) 13%,
-    hsl(344deg 0% 37%) 28%,
-    hsl(344deg 0% 57%) 61%,
-    hsl(344deg 0% 78%) 83%,
-    hsl(0deg 0% 100%) 100%
-     );
-    text-align: center;        
+    padding: 10px 30px;
+    width: fit-content;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, #000 0%, #444 100%);
+    margin-bottom: 20px;
 }
 
-.introduction h1 {
-    font-family: Quicksand;
-    color: black;
-    text-shadow: 0px 0px 2px #000000;
-}
+/* --- 4. Typography (Bigger Sizes) --- */
+h1 { font-size: 45px; margin: 0; color: white; }
+h3 { font-size: 35px; margin: 0; color: white; }
+h2 { font-size: 28px; line-height: 1.5; margin: 20px 0 0 10px; font-weight: normal; }
+h4 { font-size: 26px; line-height: 1.5; margin: 20px 0 0 10px; color: #ffffff; }
+h5 { font-size: 22px; margin: 20px 0 0 10px; }
 
-.introductions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 35px;
-}
-
-.introductions h2 {
-    font-family: Quicksand;
-    color: white;
-    position: absolute;
-    left: 65px;
-    top: 137.5px;
-}
-
-.infos>.info {
-    border: 2px solid #333; 
-    position: absolute;
-    top: 300.0px;
-    left: 35px;
-    padding: 0px;            
-    width: 120px;              
-    border-radius: 8px;        
-    background-image: linear-gradient(
-    45deg,
-    hsl(0deg 0% 0%) 0%,
-    hsl(344deg 0% 19%) 13%,
-    hsl(344deg 0% 37%) 28%,
-    hsl(344deg 0% 57%) 61%,
-    hsl(344deg 0% 78%) 83%,
-    hsl(0deg 0% 100%) 100%
-     );
-    text-align: center;  
-}
-
-.infos>.info h3 {
-    font-family: Quicksand;
-    font-size: 28px;
-    color: black;
-    text-shadow: 0px 0px 2px #000000;
-}
-.infos h4 {
-    font-family: Quicksand;
-    font-size: 26px;
-    color: white;
-    position: absolute;
-    left: 65px;
-    top: 400px;
-}
-
-.infos>h5 {
-    font-family: Quicksand;
-    font-size: 26px;
-    color: white;
-    position: absolute;
-    top: 530px;
-    left: 65px;
-}
-
-.infos a {
-    color: rgb(255, 255, 255);    
-    background-color: rgb(104, 104, 104);        
-    border: 2px solid rgb(104, 104, 104);
-    border-radius: 10px; 
-    padding: 5px 9px; 
-    text-decoration: none; 
+/* --- 5. Buttons --- */
+.infos a, .dwnld-btn, .dwnld-btn-old {
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 12px 20px;
     display: inline-block;
-    outline: none;
+    margin: 10px 5px;
+    transition: background 0.3s;
 }
 
-.downloads>.download {
-    border: 2px solid #333; 
-    position: absolute;
-    top: 560.0px;
-    right: 465px;
-    padding: 0px;            
-    width: 300px;              
-    border-radius: 8px;        
-    background-image: linear-gradient(
-    45deg,
-    hsl(0deg 0% 0%) 0%,
-    hsl(344deg 0% 19%) 13%,
-    hsl(344deg 0% 37%) 28%,
-    hsl(344deg 0% 57%) 61%,
-    hsl(344deg 0% 78%) 83%,
-    hsl(0deg 0% 100%) 100%
-     );
-    text-align: center;    
+.dwnld-btn:hover, .dwnld-btn-old:hover {
+    background-color: #555;
 }
 
-.downloads>.download>h1 {
-    font-family: Quicksand;
-    color: black;
-    text-shadow: 0px 0px 2px #000000;
-}
+/* --- 6. Responsive Mobile View --- */
+@media (max-width: 1100px) {
+    #tilting-png {
+        display: none !important; /* Hide image on smaller screens */
+    }
+    
+    .introductions, .infos, .downloads {
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+    }
 
-.downloads>h2 {
-    font-family: Quicksand;
-    color: white;
-    position: absolute;
-    right: 410px;
-    top: 640px;
-}
-
-.downloads>.dwnld-btn {
-    color: rgb(255, 255, 255);    
-    background-color: rgb(104, 104, 104);        
-    border: 2px solid rgb(104, 104, 104);
-    border-radius: 10px; 
-    padding: 6px 9px; 
-    display: inline-block;
-    outline: none;
-    position: absolute;
-    top: 710px;
-    right: 600px;
-}
-
-.downloads>.dwnld-btn>a {
-    font-family: Quicksand;
-    text-decoration: none;
-    color: white;
+    .introduction, .info, .download {
+        margin: 0 auto 20px auto;
+    }
+    
+    h1 { font-size: 35px; }
+    h2, h4 { font-size: 22px; margin-left: 0; }
 }
