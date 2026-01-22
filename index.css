@@ -83,9 +83,9 @@ canvas {
     padding: 0 50px;
     position: fixed;
     top: 0;
-    left: 0; /* Always add this for fixed elements */
+    left: 0; 
     z-index: 1000;
-    box-sizing: border-box; /* This keeps the padding INSIDE the 100% width */
+    box-sizing: border-box;
     outline: 3px solid white;
 }
 .navbar .logo {
@@ -97,11 +97,11 @@ canvas {
 .navbar ul {
     display: flex;
     list-style: none;
-    align-items: center; /* Keeps everything centered vertically */
-    gap: 20px;           /* Adjust this number (e.g., 15px, 25px) for more/less gap */
+    align-items: center; 
+    gap: 20px;           
 }
 
-/* Remove or comment out this old rule if you have it */
+
 .navbar ul li {
     margin: 0; 
 }
@@ -132,17 +132,16 @@ canvas {
     transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Grouping the hover effects */
+
 .btn-dc:hover, 
 .btn-tt:hover, 
 .btn-gh:hover {
     transform: scale(1.1);
-    opacity: 1 !important; /* Prevents the "Gray Bug" transparency */
-    /* Optional: adds a slight glow using the button's own color */
+    opacity: 1 !important; 
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
 }
 
-/* Individual colors (keep these separate) */
+
 .btn-dc { background: #5865F2; }
 .btn-tt { background: #ee1d52; }
 .btn-gh { background: #333333; }
