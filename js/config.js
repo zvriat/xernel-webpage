@@ -12,4 +12,4 @@ const CORNER_RADIUS = 2 * SCALE;
 
 
 const WAVE_AMPLITUDE = 5 * SCALE;
-const WAVE_SPEED = 0.0002;
+const WAVE_SPEED = 0.0003;

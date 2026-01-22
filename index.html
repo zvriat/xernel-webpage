@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark only">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="imgs/moveicon.png">
     <link rel="icon" type="image/png" href="imgs/favicon.ico">
@@ -11,6 +12,37 @@
 <body>
 
     <canvas id="canvas"></canvas>
+
+    <nav class="navbar">
+  <div class="logo">Xernel</div>
+  
+  <input type="checkbox" id="click">
+  <label for="click" class="menu-btn">
+    <i class="fas fa-bars"></i>
+  </label>
+
+<ul>
+  <li>
+    <a href="https://discord.com/invite/XYPCy86d6u" target="_blank" class="btn-dc">
+      <img src="imgs/discord.png" alt="Discord" class="nav-icon">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.tiktok.com/@minitrixx666?is_from_webapp=1&sender_device=pc" target="_blank" class="btn-tt">
+      <img src="imgs/tiktok.png" alt="TikTok" class="nav-icon">
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/zvriat" target="_blank" class="btn-gh">
+      <img src="imgs/github.png" alt="GitHub" class="nav-icon">
+    </a>
+  </li>
+  <li>
+  <li>
+    <a href="#download-section" class="btn-download">Downloads</a>
+  </li>
+</ul>
+</nav>
 
     <img id="tilting-png" src="imgs/moveicon.png" alt="moveicon">
     <script src="js/config.js"></script>
@@ -31,16 +63,18 @@
         </div>
         <h4>Dont freak out if smartscreen cannot recognise the app,<br> shortly i did not sign the app.<br>
              I dont want to buy it, it will cost like $200 - $600+/year.</h4>
-        <h5>tools that i used <a href="https://www.nuget.org/packages/Guna.UI2.WinForms">Guna.UI2</a> , <a href="https://visualstudio.microsoft.com">Visual Studio 2026</a> , <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">.Net 10</a> , and WinForms</h5>
+        <h5>tools that i used <a href="https://www.nuget.org/packages/Guna.UI2.WinForms" target="_blank">Guna.UI2</a> , <a href="https://visualstudio.microsoft.com" target="_blank">Visual Studio 2026</a> , <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0" target="_blank">.Net 10</a> , and WinForms</h5>
     </div> 
 
     <script src="js/arrow.js"></script>
 
     <div id="scroll-arrow" class="arrow-container">
-        <div class="arrow"></div>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
-    <div class="downloads">
+    <div class="downloads" id="download-section" >
         <div class="download">
             <h1>Download Xernel</h1>
         </div>
