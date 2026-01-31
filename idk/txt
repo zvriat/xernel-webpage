@@ -1,0 +1,22 @@
+ADD THIS, I REMOVED IT CUS I DONT WANT THE OLD VERSION( XERNEL V1.0)!!
+AND I REMOVED THE BTN AND THE "or" TEXT!!!!!!:
+
+<h2>,or</h2>
+
+        <div class="dwnld-btn-old">
+            <a href="Xernel.exe"download>download Xernel test version (old 1.0)</a>
+        </div>
+
+css:
+
+h2 { font-size: 28px; line-height: 1.5; margin: 20px 0 0 10px; font-weight: normal; }
+
+.dwnld-btn-old {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 12px 20px;
+  border: 2px solid #555;
+  border-radius: 10px;
+  background-color: #333;
+  transition: background 0.3s;
+}

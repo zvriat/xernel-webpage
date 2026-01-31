@@ -160,7 +160,6 @@ canvas {
 /* Typography */
 h1, h3 { font-size: 45px; margin: 0; }
 h3 { font-size: 35px; }
-h2 { font-size: 28px; line-height: 1.5; margin: 20px 0 0 10px; font-weight: normal; }
 h4 { font-size: 26px; line-height: 1.5; margin: 20px 0 0 10px; }
 h5 { font-size: 22px; margin: 20px 0 0 10px; }
 
@@ -172,8 +171,7 @@ a {
 
 /* Download-style links and buttons */
 .infos a,
-.dwnld-btn,
-.dwnld-btn-old {
+.dwnld-btn {
   display: inline-block;
   margin: 10px 5px;
   padding: 12px 20px;
